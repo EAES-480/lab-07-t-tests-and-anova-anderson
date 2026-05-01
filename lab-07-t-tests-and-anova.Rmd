@@ -15,6 +15,8 @@ editor_options:
   chunk_output_type: inline
 ---
 
+GRADE GM: 9.5/10 - Strong work overall. Excellent code execution, good visualizations, and solid conceptual understanding. Minor deductions for small wording/precision issues.
+
 ```{r setup, echo=FALSE, message=FALSE, warning=FALSE}
 library(tidyverse)
 library(lubridate)
@@ -117,6 +119,8 @@ mean(x, na.rm = TRUE); sd(x, na.rm = TRUE); length(x)
 
 I chose air temperature in 2023 since it has some variation across time, and picked a sample of 60 observations which should show the fluctuation well.
 
+> GM: Good answer — Reasonable choice and justification. n=60 is solid.
+
 ---
 
 ## 2) State a null hypothesis
@@ -186,6 +190,9 @@ t.test(x, mu = mu0)
 > Does the `t.test()` output agree with your manual calculation? If not, why might that be?
 
 The t-test output does agree with my manual calculation. If they were to be different, I'd assume it would be from how the output chose to handle missing values and lack of precision. 
+
+> GM: Good — Matches and reasonable explanation for potential discrepancies.
+
 ---
 
 # Part II — Two-sample t-test
@@ -274,6 +281,8 @@ t.test(x1, x2)
 > Does the automated t-test agree with your manual result?
 
 The values of the t-test mostly agree with my manual results. The p-values are different.
+
+> GM: -0.25: Minor — The automated and manual results should match very closely (Welch t-test on same data). Small differences can occur due to rounding/NA handling, but they are usually negligible.
 
 ---
 
@@ -367,6 +376,9 @@ t.test(x1, x2, paired = TRUE)
 > How does the paired t-test differ conceptually from the two-sample t-test?
 
 A paired t-test accounts for pair variability, which makes it more reliable and stable than a two-sample test. 
+
+> GM: -0.25 Overall good — Solid conceptual distinction - but the sample data have to be from the paired conditions (the same trees on two different days)
+
 ---
 
 # Part IV — ANOVA
@@ -472,6 +484,9 @@ summary(model)
 > What does the ANOVA p-value tell you? Does it tell you which groups differ?
 
 The ANOVA p-value tells us whether at least one group mean significantly differs. It does not tell us which groups differ.
+
+> GM: Excellent — Concise and accurate.
+
 ---
 
 ## 18) Final reflection
@@ -484,6 +499,8 @@ Answer in **5–7 sentences**:
 - What stayed the same across all these tests?
 
 A one-sample t-test compares a sample mean to a hypothesized value, while a two-sample t-test compares means between two groups. The paired t-test is special because it accounts for matched observations, which helps reduce variability. ANOVA generalizes the t-test by allowing the comparison of more than two groups at once. Across all the tests, however, they stayed the same through the structure of estimating a mean, uncertainty, and a test statistic and p-value. They all rely on estimations about variability.
+
+> GM: Good answer — Clear and mostly complete. You correctly distinguished the tests and identified the shared core logic.
 
 ---
 
